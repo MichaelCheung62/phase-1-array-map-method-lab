@@ -1,3 +1,10 @@
+/*
+1. Determine how we will capitalize first letter of  each word - split/join methods
+
+2.
+
+
+*/
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -12,5 +19,10 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  const experiment = tutorials.map(title => {
+    const splitTitle = title.split(" ")
+    return splitTitle.map(word => word[0].toUpperCase() + word.substring(1)).join(" ")
+})
+  return experiment
+
 }
